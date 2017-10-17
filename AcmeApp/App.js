@@ -1,7 +1,36 @@
 import React, { Component } from 'react';
-import {  Button, Platform, StyleSheet, Text, View } from 'react-native';
+import { AppState, Button, Platform, StyleSheet, Text, View } from 'react-native';
+import Push from 'mobile-center-push';
+import CodePush from 'react-native-code-push';
+
+const DEFAULT_KEY = 'SOME DEFAULT KEY';
 
 export default class App extends Component<{}> {
+  
+  constructor(props) {
+    super(props);    
+    try {
+      //See if we have a CodePush deployment key in localstorage
+      const value = await AsyncStorage.getItem('deploymentKey');      
+      if (value !== null){
+        console.log('Executing CodePush Sync using local key');
+        CodePush.sync({value});
+      } else {
+        console.log('Executing CodePush Sync using default key');
+        CodePush.sync({DEFAULT_KEY});
+        //or perhaps should this just be:
+        //CodePush.sync();
+      }
+    } catch (error) {
+      console.error('Unable to retrieve value from AsyncStorage');
+      console.dir(error);
+      console.log('Executing CodePush Sync using default key');
+      CodePush.sync({DEFAULT_KEY});      
+      //or perhaps should this just be:
+      //CodePush.sync();
+    }
+  }
+
   render() {
     return (
       <View> 
@@ -22,8 +51,7 @@ export default class App extends Component<{}> {
         <Button onPress={this.onButtonPress}
           title="Press me"
           color="#841584"
-          accessibilityLabel="Purple button"
-        />
+          accessibilityLabel="Purple button" />
       </View>
     )
   }
@@ -31,7 +59,29 @@ export default class App extends Component<{}> {
   onButtonPress(event){
     console.log('Button pressed!');
   }
+
 }
+
+Push.setEventListener({
+  pushNotificationReceived(pushNotification) {
+    let {message, title} = pushNotification; // Use these to display a message to the user if required
+    let deploymentKey; 
+    if (pushNotification.customProperties && Object.keys(pushNotification.customProperties).length > 0) {
+      deploymentKey = pushNotification.customProperties.codePushDeploymentKey;
+      // Store the deployment key in Async Storage. Use this in the codepush.sync call if you use CodePush when the app starts up. 
+      AsyncStorage.setItem('deploymentKey', deploymentKey);
+      // You may also want to removeItem from asyncStorage to clear the A/B test and revert to original version of the app. 
+    }
+
+    if (AppState.currentState === 'active') {
+      CodePush.sync({deploymentKey});
+    } else {
+      // Sometimes the push callback is received shortly before the app is fully active in the foreground.
+      // Since we store the deployment key in AsyncStorage, codepush sync will be called when the app starts 
+      // again, and the A/B test will run.
+    }
+  }
+});
 
 const styles = StyleSheet.create({
   toolbar:{
