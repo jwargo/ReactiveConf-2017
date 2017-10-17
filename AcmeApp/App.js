@@ -34,36 +34,26 @@ export default class App extends Component<{}> {
 }
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   backgroundColor: '#F5FCFF',
-  // },
-
   toolbar:{
     backgroundColor:'blue',
     paddingTop:30,
     paddingBottom:10,
     flexDirection:'row'    
-},
-toolbarButton:{
+  },
+  toolbarButton:{
     width: 50,
     color:'#fff',
     textAlign:'center'
-},
-toolbarTitle:{
+  },
+  toolbarTitle:{
     color:'#fff',
     textAlign:'center',
     fontWeight:'bold',
     flex:1 
-},
-
+  },
   content: {
     textAlign: 'left',
     color: 'black',
-    // marginTop: 10,
-    // marginBottom: 10,
     padding: 10
   },
 });
