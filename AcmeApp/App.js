@@ -9,6 +9,9 @@ export default class App extends Component<{}> {
   
   constructor(props) {
     super(props);    
+    //The following is just a first pass at some code designed to 
+    //make this app a more complete example. I've not tested it, 
+    //but I think it does cover the use case.
     try {
       //See if we have a CodePush deployment key in localstorage
       const value = await AsyncStorage.getItem('deploymentKey');      
