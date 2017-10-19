@@ -8,9 +8,9 @@
  */
 
 #import "AppDelegate.h"
-#import <RNCrashes/RNCrashes.h>
 #import <RNAnalytics/RNAnalytics.h>
-#import <RNMobileCenter/RNMobileCenter.h>
+#import <CodePush/CodePush.h>
+#import <RNPush/RNPush.h>
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -21,13 +21,16 @@
 {
   NSURL *jsCodeLocation;
 
-  [RNCrashes registerWithCrashDelegate: [[RNCrashesDelegateAlwaysSend alloc] init]];  // Initialize Mobile Center crashes
-
   [RNAnalytics registerWithInitiallyEnabled:true];  // Initialize Mobile Center analytics
 
-  [RNMobileCenter register];  // Initialize Mobile Center 
+  [RNPush register];  // Initialize Mobile Center push
 
-  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+  
+    #ifdef DEBUG
+        jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+    #else
+        jsCodeLocation = [CodePush bundleURL];
+    #endif
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"AcmeApp"
