@@ -1,29 +1,21 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import { Alert, AppState, AsyncStorage, Button, Platform, StyleSheet, Text, View } from 'react-native';
-import Push from 'mobile-center-push';
-import CodePush from 'react-native-code-push';
 import Analytics from "mobile-center-analytics";
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import CodePush from 'react-native-code-push';
+import Push from 'mobile-center-push';
 
 export default class App extends Component<{}> {
 
   constructor(props){
     super(props);
     console.log('Initializing app');
-    Analytics.trackEvent("App initiated", { version: "A" });
-    // Analytics.trackEvent("App initiated", { version: "B" });
+    Analytics.trackEvent("App initiated", { version: "A" })
+    // Analytics.trackEvent("App initiated", { version: "B" })
+    .then(success => {
+      console.log("Success!");
+    }).error(error => {
+      console.error(err);
+    });
   }
 
   render() {
@@ -54,10 +46,11 @@ export default class App extends Component<{}> {
 
   onButtonPress(event){    
     console.log("Button pressed");    
-    //For some reason, the following isn't working:
-    // Analytics.trackEvent("Button pressed");
-    //the following was copied directly from the documentation - doesn't work either
-    Analytics.trackEvent("Video clicked");
+    Analytics.trackEvent("Button pressed").then(success => {
+      console.log("Success!");
+    }).error(error => {
+      console.error(err);
+    });
   }
 }
 
