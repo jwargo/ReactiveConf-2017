@@ -49,9 +49,11 @@ export default class App extends Component<{}> {
   onButtonPress(event){    
     console.log("Button pressed");    
     //For some reason, the following isn't working:
-    // Analytics.trackEvent("Button pressed");
-    //the following was copied directly from the documentation - doesn't work either
-    Analytics.trackEvent("Video clicked");
+    // Analytics.trackEvent("Button pressed").then(success => {
+    //   console.log("Success");
+    // }).error(error => {
+    //   console.error(error);
+    // });
   }
 }
 
