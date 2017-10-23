@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.microsoft.azure.mobile/mobile-center-push/0.12.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="df309993854bb5b239e80bcfa0f3dd6bcb2dc054">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.microsoft.azure.mobile-mobile-center-push-0.12.0_bc05ac18210c5799285e6f56ca225f9736e57668.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/com.github.stephenc.jcip/jcip-annotations/1.0-1/ef31541dd28ae2cefdd17c7ebf352d93e9058c63/jcip-annotations-1.0-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ef31541dd28ae2cefdd17c7ebf352d93e9058c63">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/jcip-annotations-1.0-1_52e81592ac21d9005701f065a045bbda4dc8f889.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_d8097e757ed95d422465b4e40b76e6e62bc39bd9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.microsoft.azure.mobile/mobile-center-analytics/0.12.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2ec2b4f102f0b053078a21c35de67070c85ebd80">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.microsoft.azure.mobile-mobile-center-analytics-0.12.0_e0d3303ba9f1f71c4c9e5e51dfdfc88d3ae1f6c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/11.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fc5624185d414a0f572bfb3df7d841ceb335aef9">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-11.0.2_012af6bd41e0c8ae65654583a55ac89ff774ef45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_17b80fb4471f26e4a69c362fa9842dc66b0fefe4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.2.0_f702891b3dddf3e6ab033de2ce4cca2929ef5fd0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/AcmeApp/mobile-center-push/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0da2968e5b5705fffe1f4551c66fb8e070d5bb62">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/AcmeApp-mobile-center-push-unspecified_0c0cb7057797c56c748196cda4005e6f6d72de8b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.2.0_d84c76e7b83468940c0b7ffdf6e909a71c7d002f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.microsoft.azure.mobile/mobile-center/0.12.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a44c43ebc1fe6c6ca61f9df1e2b6f062d79f2e62">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.microsoft.azure.mobile-mobile-center-0.12.0_13b39469584e28e7e336017eab4dda51633256c3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/11.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9a6350134db98fb39e212ddca5f0bad9280e8f3f">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-11.0.2_568891090f8b360eaf6c879421c9343d8194e50f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.2.0_96b30d2571f12c64ae49c96d7b05a138d1781794.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_adca9c73e18129673d25088eb2e767182220ccc0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_051eafb9189139521c43bb609937d3bafdbe97b7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/net.minidev/accessors-smart/1.2/c592b500269bfde36096641b01238a8350f8aa31/accessors-smart-1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c592b500269bfde36096641b01238a8350f8aa31">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/accessors-smart-1.2_018a53f291e134f844e785be9b9671882d8eb257.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_c0d833a4a9bb3512ef2ff6ec3f07ff41d73a288d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_fe9b6b9cab8d44fa2efb801dd3b90bb6fd2b9f1c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_c061ac1c88f3a0db8016b4a8becfc513072ff2f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/AcmeApp/react-native-code-push/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="238094181cf640310e131f7086877d273e455512">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/AcmeApp-react-native-code-push-unspecified_7bb98292599302086c48c9aef1a122553ca1bf9f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_4c11c95bd1426c0bb6aac2a46a0022b248b3964b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_3f6733b90bd8a491646ccd7c9b4a95cbb31169de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="86baa7d1051901fc1b8e7f596732f71f32175bde">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-11.0.2_be2c20a77020ca4900e6222cac3ab5672e2fc878.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/11.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f260cdc1a267b17b911022919f19d568e6624229">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-11.0.2_2e159916e1cf50f3db0f3fb2cc0192ba7c400a89.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_e15dc8f95d93eebc41831446f37fe2b70867bee8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.49.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e013739f7ddb6740bf196dc515d8999a6030f9ea">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.49.3_2c8f0a5ba4a68df132919bb297bc06a140959f9f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_659286e5dc2cb70a72d9c5d837397602c30edff7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a71be5f29a1c1e3fd3e84472742668f101a5b936">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.0.2_c88765929e9e64cfc29a908fe578e0f3d43c9271.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_bbe3bab2835223813efcbb907b598e9cd5fdd0a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.49.3/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_59b7b9c320017e604a57a0361f715a92a8509714.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_afee8b61216c57f77c4c4c26133b3af0aa474de1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_eeb9227fda1a2bd095ee5ad50eb58590a502326a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/11.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2c1d9fbe7d2f686b3dcdbc3f63a983a211401ca3">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-11.0.2_b5d14509cb9b13e30d6e02bd3f1a86f6cec2a90f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/net.minidev/json-smart/2.3/7396407491352ce4fa30de92efb158adb76b5b/json-smart-2.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="007396407491352ce4fa30de92efb158adb76b5b">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/json-smart-2.3_043fd05a2667169d20c290c2e560990fa9ebbbd3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.0.4/da08b8cce7bbf903602a25a3a163ae252435795/asm-5.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0da08b8cce7bbf903602a25a3a163ae252435795">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/asm-5.0.4_fb6758ab425f7f0b8f7bcc404fba9d79c3fef00a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.2.0_b3ed03434fbffe2a8427e2ccb3a92592a9783027.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/com.nimbusds/nimbus-jose-jwt/5.1/98dfb9ee74d290afce026a262c6297138a0c8ec4/nimbus-jose-jwt-5.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="98dfb9ee74d290afce026a262c6297138a0c8ec4">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/nimbus-jose-jwt-5.1_8fca22a286a9e4ec4e8087d7ea26c41c872e9a49.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_068afb825202fd6d48244da9657297065d7c7445.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.2.0_c29eab313daf3c1182b5c7fc86660baa7d48d10a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_e43b4f27fa6bda9672ce50fa6dd6723ff8ec3273.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.2.0_99fb54e4bc23855435805a492aa540a9c0a95111.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.2.0_5943e63e881f52b93fbc0b055f7646f848707970.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/AcmeApp/mobile-center-analytics/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="22ab407d0062c15e281feeef17adc30c56172786">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/AcmeApp-mobile-center-analytics-unspecified_ba05d8d1e1c8e11232943d664dbdf4811edb88ce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/11.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2737331564e0084fc0eb30ba500564a6dbe5e98f">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-11.0.2_e50852834518ba3a8a06b931e1831e229df2a207.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/exploded-aar/com.microsoft.azure.mobile.react/mobile-center-react-native/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="14ea19922c2961392ad3bd5c5228d88fe3709f8e">
+        <dex dex="/Users/johnwargo/dev/AcmeApp/android/app/build/intermediates/pre-dexed/debug/com.microsoft.azure.mobile.react-mobile-center-react-native-0.10.0_2726f58a23d598da43a1bf6cc8a58d030925037f.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AcmeApp.iml" filepath="$PROJECT_DIR$/AcmeApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../node_modules/mobile-center-push/android/mobile-center-push.iml" filepath="$PROJECT_DIR$/../node_modules/mobile-center-push/android/mobile-center-push.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../node_modules/react-native-code-push/android/app/react-native-code-push.iml" filepath="$PROJECT_DIR$/../node_modules/react-native-code-push/android/app/react-native-code-push.iml" />
+    </modules>
+  </component>
+</project>
