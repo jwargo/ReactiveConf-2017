@@ -4,19 +4,34 @@ import Analytics from "mobile-center-analytics";
 import CodePush from 'react-native-code-push';
 import Push from 'mobile-center-push';
 
+const DEFAULT_KEY={deploymentKey: "PUT YOUR BASE DEPLOYMENT KEY HERE"};
+
 export default class App extends Component<{}> {
 
   constructor(props){
     super(props);
     console.log('Initializing app');
-    Analytics.trackEvent("App initiated", { version: "A" })
-    // Analytics.trackEvent("App initiated", { version: "B" })
-    .then(success => {
-      console.log("Success!");
-    }).error(error => {
-      console.error(err);
-    });
-  }
+
+    console.log("Checking AsyncStorage for deployment key");
+    AsyncStorage.getItem('deploymentKey').then((value) => {
+      if (value !== null){
+        console.log("Deployment key:", value);
+        CodePush.sync({"deploymentKey": value});        
+      } else {
+        console.log("Using default deployment key");
+        CodePush.sync(DEFAULT_KEY);
+      }
+    }).catch((err)=>{
+      console.error("Error reading Async Storage:", err.message);
+      console.log("Using default deployment key");
+      CodePush.sync(DEFAULT_KEY);  
+    });    
+  
+    // Now tell everyone we're initialized
+    Analytics.trackEvent("App initiated", { version: "CORE" });
+    // Analytics.trackEvent("App initiated", { version: "A" });
+    // Analytics.trackEvent("App initiated", { version: "B" });    
+}
 
   render() {
     return (      
@@ -39,18 +54,15 @@ export default class App extends Component<{}> {
           title="Press me"
           color="#841584"
           //color="red"
-          accessibilityLabel="Purple button" />
+          //color="green"
+          //color="blue"
+          accessibilityLabel="A colored button." />
     </View>
     );
   }
 
   onButtonPress(event){    
-    console.log("Button pressed");    
-    Analytics.trackEvent("Button pressed").then(success => {
-      console.log("Success!");
-    }).error(error => {
-      console.error(err);
-    });
+    console.log("Button pressed"); 
   }
 }
 
@@ -65,7 +77,7 @@ Push.setEventListener({
       if (deploymentKey) {
         console.log(`Deployment key: ${deploymentKey}`);
         // Store the deployment key in Async Storage. Use this in the codepush.sync call if you use CodePush when the app starts up. 
-        AsyncStorage.setItem('deploymentKey', deploymentKey);
+        AsyncStorage.setItem('deploymentKey', deploymentKey);        
         // You may also want to removeItem from asyncStorage to clear the A/B test and revert to original version of the app. 
         if (AppState.currentState === 'active') {
           CodePush.sync({deploymentKey});
