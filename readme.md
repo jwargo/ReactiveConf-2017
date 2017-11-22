@@ -1,2 +1,2 @@
-# ReactiveCon 2017 
-This repository countains the project source code for my ReactiveConf 2017 session.  The session's entitled *Creative Hacking: Using Code Push for React Native A/B Testing*. In the session, I'll show how to, well, do A/B testing in a React Native app using Microsoft Visual Studio Mobile Center's CodePush service.
+# Visual Studio App Center: A/B Testing for React Native Apps
+This repository countains the project source code for my ReactiveConf 2017 session.  My session, *Creative Hacking: Using Code Push for React Native A/B Testing*, demonstrated how to use several Visual Studio App Center features (Analytics, CodePush, and Push) to implement A/B testing in a React Native application.
