@@ -46,6 +46,21 @@ Now, create the different revisions of the app using whatever source control mec
 
 ### Push Processing Code
 
+The prooject's `app.js` file contains the client-side implementation for A/B testing. The app supports Push through the following import:
+
+	import Push from 'appcenter-push';
+
+Next, the app uses a constant to store the deployment key for the base version of the application (not either of the A/B revisions):
+
+	const DEFAULT_KEY={deploymentKey: "PUT YOUR BASE DEPLOYMENT KEY HERE"};
+
+To get the deployment key, open a terminal window and execute the following command:
+
+	code-push deployment ls MyApp -k
+
+From the command's output, grab the `Production` deployment key.
+
+On app startup, the app's `constructor` code checks to see if there's a deployment key stored in the device's async storage repository. If it finds a key, it uses that key to initiate a CodePush `sync` to pull down the latest version of whatever revision of the app its supposed to be using. If it doesn't find the key in storage, or if retrieving the key from storage fails, it uses the default key stored in the `DEFAULT_KEY` constant.
 
 	constructor(props){
 	    super(props);
@@ -70,28 +85,33 @@ Now, create the different revisions of the app using whatever source control mec
 	    // Analytics.trackEvent("App initiated", { version: "B" });    
 	}
 
-and then there's this...
+**Note:** At the bottom of the `constructor`, the calls to `Analytics.trackEvent()` send an event notification to VSAC Analytics indicating which version of the app is running on this device. Uncomment the line that aligns with the version of the application you're working with (commenting out the other lines).
 
+That takes care of the startup process, the app must still respond to push notifications; this is done through the `setEventListener` code shown below. The event fires every time the app receives a push notification, and pulls the deployment key from the notification message then uses it to initiate a CodePush `sync` to get a new revision of the application.
 
 	Push.setEventListener({
 	  pushNotificationReceived(pushNotification) {
-	    let {message, title} = pushNotification; // Use these to display a message to the user if required
+	    // Use these to display a message to the user if required
+	    let {message, title} = pushNotification; 
 	    console.log(`Notification received: ${title} - ${message}`);
-	  
+	    
 	    let deploymentKey; 
 	    if (pushNotification.customProperties && Object.keys(pushNotification.customProperties).length > 0) {
 	      deploymentKey = pushNotification.customProperties.deploymentKey;
 	      if (deploymentKey) {
 	        console.log(`Deployment key: ${deploymentKey}`);
-	        // Store the deployment key in Async Storage. Use this in the codepush.sync call if you use CodePush when the app starts up. 
+	        // Store the deployment key in Async Storage. Use this in the codepush.sync 
+	        // call if you use CodePush when the app starts up. 
 	        AsyncStorage.setItem('deploymentKey', deploymentKey);        
-	        // You may also want to removeItem from asyncStorage to clear the A/B test and revert to original version of the app. 
+	        // You may also want to removeItem from asyncStorage to clear the A/B test 
+	        //and revert to original version of the app. 
 	        if (AppState.currentState === 'active') {
 	          CodePush.sync({deploymentKey});
 	        } else {
-	          // Sometimes the push callback is received shortly before the app is fully active in the foreground.
-	          // Since we store the deployment key in AsyncStorage, codepush sync will be called when the app starts 
-	          // again, and the A/B test will run.
+	          // Sometimes the push callback is received shortly before the app is fully 
+	          // active in the foreground. Since we store the deployment key in AsyncStorage,
+	          // CodePush sync will be called when the app starts again, and the A/B test 
+	          // will run.
 	        }
 	      }          
 	    }
@@ -100,16 +120,20 @@ and then there's this...
 
 ### Sending the Trigger Push Notification
 
-With your A and B versions completed and ready to deploy, you're ready to use App Center's Push service to trigger app deployments and get your "experimental" apps into your users' hands. 
+With your A and B versions completed and ready to deploy, you're ready to use App Center's Push service to trigger app deployments and get your "experimental" apps into your users' hands. To do this, create a push notification containing a custom data object referencing the revision version's Deployment ID and send it to a subset of your app's users.
+ 
+To get the deployment key, open a terminal window and execute the following command:
 
-"	To do this,  send a push notification that contains a custom data object referencing the revision version's Deployment ID and deploy to your defined user segments. 
-"	To obtain the deployment ID, you'll use the CodePush CLI: code-push deployment ls APP_NAME -k, for example: code-push deployment ls MyApp -k
+	code-push deployment ls MyApp -k
 
-Push notification processing information lives in your app.js file; when your app receives the notification, it retrieves the deployment ID and automatically pulls the correct revision from CodePush. 
+The command's output will list the deployment key for each of your defined deployments, grab the one for the particular revision you want deployed.
 
-Visual Studio App Center Push includes an ￼Audience feature￼ , allowing you to send notifications to a subset of your users, using Figure 1one or more app or device properties.   
+To send the push notification, open the VSAC Dashboard and select your application project. Select **Push** from the project's navigation pane. The first time you do this, App Center will walk you through the process of setting up the third-party push services (Google, Apple, etc.) used to deliver messages to devices. Once you've completed that initial setup, open the **Notifications** panel, then click the 
 
 ![Visual Studio App Center: Composing a Push Notification](images/figure-02.png)
 
+Visual Studio App Center Push includes an ￼Audience feature￼ , allowing you to send notifications to a subset of your users, using Figure 1one or more app or device properties.   
+
+## Afterwards
 
 When you're done A/B testing and want to reset your app to its default content, simply push the Deployment ID for the Production deployment to the same audience. You can also switch all users to the winning app version  by pushing the Deployment ID for the winning version to all users.
