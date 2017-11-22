@@ -1,11 +1,11 @@
 # Visual Studio App Center: Delivering A/B Testing for React Native Apps
-This repository countains the project source code for my ReactiveConf 2017 session.  My session, *Creative Hacking: Using Code Push for React Native A/B Testing*, demonstrated how to use several Visual Studio App Center (VSAC) features (Analytics, CodePush, and Push) to implement A/B testing in a React Native application.
+This repository contains the project source code for my ReactiveConf 2017 session.  My session, *Creative Hacking: Using Code Push for React Native A/B Testing*, demonstrated how to use several Visual Studio App Center (VSAC) features (Analytics, CodePush, and Push) to implement A/B testing in a React Native application.
 
 ## Using Analytics & Crash to Understand User Behavior
 
 As you build the A/B variants of your app, you'll need some way to determine how or how well the app is used by the app users.
 
-Start by implementing VSAC Crashs to your application. With this in place, you'll know whenever the app crashes and gather additional information you'll need to troubleshoot and fix the application. Since we're experimenting with new versions of the app, there's no guarantee all the bugs are gone, so this extra level of protection is important. Refer to the [Visual Studio App Center Crashes Documentation](https://docs.microsoft.com/en-us/appcenter/crashes/) for details on how to add Crashes support to your application.
+Start by implementing VSAC Crashes to your application. With this in place, you'll know whenever the app crashes and gather additional information you'll need to troubleshoot and fix the application. Since we're experimenting with new versions of the app, there's no guarantee all the bugs are gone, so this extra level of protection is important. Refer to the [Visual Studio App Center Crashes Documentation](https://docs.microsoft.com/en-us/appcenter/crashes/) for details on how to add Crashes support to your application.
 
 Next, VSAC Analytics capabilities to track users' activity in your app, with all information visualized in VSAC Analytics dashboard to make it easy to see trends or identify gaps. This provides you with invaluable information about your user's experience with the app.
 
@@ -38,7 +38,7 @@ When you're done, the deployments list in App Center will list the additional de
 
 ![Visual Studio App Center: Deployments List](images/figure-01.png)
  
-Now, create the different revisions of the app using whatever source control mechanism that works for you. Usually you'll just put them into different branches in your code repository. With those in place, plublish each revision to its own CodePush Deployment in VSAC. For my example app, I published the RevisionA variant of the app to CodePush using the following command:
+Now, create the different revisions of the app using whatever source control mechanism that works for you. Usually you'll just put them into different branches in your code repository. With those in place, publish each revision to its own CodePush Deployment in VSAC. For my example app, I published the RevisionA variant of the app to CodePush using the following command:
 
 	code-push release-react MyApp android --d RevisionA
 
@@ -46,7 +46,7 @@ Now, create the different revisions of the app using whatever source control mec
 
 ### Push Processing Code
 
-The prooject's `app.js` file contains the client-side implementation for A/B testing. The app supports Push through the following import:
+The project's `app.js` file contains the client-side implementation for A/B testing. The app supports Push through the following import:
 
 	import Push from 'appcenter-push';
 
@@ -118,7 +118,7 @@ That takes care of the startup process, the app must still respond to push notif
 	  }
 	});
 
-### Sending the Trigger Push Notification
+### Sending a Trigger Push Notification
 
 With your A and B versions completed and ready to deploy, you're ready to use App Center's Push service to trigger app deployments and get your "experimental" apps into your users' hands. To do this, create a push notification containing a custom data object referencing the revision version's Deployment ID and send it to a subset of your app's users.
  
@@ -128,11 +128,19 @@ To get the deployment key, open a terminal window and execute the following comm
 
 The command's output will list the deployment key for each of your defined deployments, grab the one for the particular revision you want deployed.
 
-To send the push notification, open the VSAC Dashboard and select your application project. Select **Push** from the project's navigation pane. The first time you do this, App Center will walk you through the process of setting up the third-party push services (Google, Apple, etc.) used to deliver messages to devices. Once you've completed that initial setup, open the **Notifications** panel, then click the 
+To send the push notification, open the VSAC Dashboard and select your application project. Select **Push** from the project's navigation pane. The first time you do this, App Center will walk you through the process of setting up the third-party push services (Google, Apple, etc.) used to deliver messages to devices. Once you've completed that initial setup, open the **Notifications** panel, then click the **Send Notification** button to create a new notification. 
+
+On the **Send Notification** form that appears, populate the **Campaign Name**, **Title**, and **Message** fields as needed. Since the push notification is handled automatically by the app, the user will never see these values displayed anywhere. In the **Custom data** list displayed on the bottom of the form, click the **+** button to add a new data key/value pair. Using the following figure as a guide, enter a key of `deploymentKey` and the Deployment Key as the `value`. Be sure to use the Deployment key for the particular revision of the app you want deployed. Click the **Next** button to continue.
 
 ![Visual Studio App Center: Composing a Push Notification](images/figure-02.png)
 
-Visual Studio App Center Push includes an ￼Audience feature￼ , allowing you to send notifications to a subset of your users, using Figure 1one or more app or device properties.   
+Push can send notifications to all registered devices, a specific list of devices, or, using the **Audiences** feature, to all devices that match specific properties. In the **Target** pane, select **Audience**, then click the **New Audience** option.
+
+![Visual Studio App Center: Notification Target](images/figure-03.png)
+
+In the **New audience** panel, populate the form with an appropriate **Audience name** and **description**, then use audience rules at the bottom of the form to define one or more criteria Push will use to identify targets for the push notification. Click the **Save** button when you're done. Back at the **Send Notification** panel, click the **Next** button 
+
+![Visual Studio App Center: Notification Audience](images/figure-04.png)
 
 ## Afterwards
 
