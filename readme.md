@@ -142,8 +142,14 @@ In the **New audience** panel, populate the form with an appropriate **Audience 
 
 ![Visual Studio App Center: Notification Audience](images/figure-04.png)
 
-In the **Send notification** 
+In the **Send notification** form, review the settings for the notification, then click the **Send notification** button to send the notification to the selected audience.
+
+Repeat the process to deploy the other revision of your app to different users.
+
+## Monitor A/B Usage
+
+With the A and B revisions running in the wild, monitor VSAC Crashes and Analytics to see what's happening with users. Based on user feedback and what you see in analytics, pick the winning approach and continue on.
 
 ## Afterwards
 
-When you're done A/B testing and want to reset your app to its default content, simply push the Deployment ID for the Production deployment to the same audience. You can also switch all users to the winning app version  by pushing the Deployment ID for the winning version to all users.
+When you're done A/B testing and want to reset your app to its default content, simply push the Deployment ID for the Production deployment to the same audience. You can also switch all users to the winning app version by pushing the Deployment ID for the winning version to all users.
