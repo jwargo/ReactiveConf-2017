@@ -118,7 +118,7 @@ That takes care of the startup process, the app must still respond to push notif
 	  }
 	});
 
-### Sending a Trigger Push Notification
+### Sending a Push Notification Trigger
 
 With your A and B versions completed and ready to deploy, you're ready to use App Center's Push service to trigger app deployments and get your "experimental" apps into your users' hands. To do this, create a push notification containing a custom data object referencing the revision version's Deployment ID and send it to a subset of your app's users.
  
@@ -141,6 +141,8 @@ Push can send notifications to all registered devices, a specific list of device
 In the **New audience** panel, populate the form with an appropriate **Audience name** and **description**, then use audience rules at the bottom of the form to define one or more criteria Push will use to identify targets for the push notification. Click the **Save** button when you're done. Back at the **Send Notification** panel, click the **Next** button 
 
 ![Visual Studio App Center: Notification Audience](images/figure-04.png)
+
+In the **Send notification** 
 
 ## Afterwards
 
